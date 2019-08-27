@@ -1,5 +1,6 @@
-import TicTacToeController
-import TicTacToeModel
+import Controller
+import Model
+import View
 
 
 def main():
