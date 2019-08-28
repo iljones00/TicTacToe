@@ -14,15 +14,15 @@ class View(ABC):
 class ConsoleView(View):
     def display(self):
         print("   |   |   ")
-        print(" " + self.board[0][0] + " | " + self.board[0][1] + " | " + self.board[0][2] + " ") 
+        print(" " + self.board[0][0] + " | " + self.board[1][0] + " | " + self.board[2][0] + " ") 
         print("   |   |   ")
         print("---|---|---")
         print("   |   |   ")
-        print(" " + self.board[1][0] + " | " + self.board[1][1] + " | " + self.board[1][2] + " ") 
+        print(" " + self.board[0][1] + " | " + self.board[1][1] + " | " + self.board[2][1] + " ") 
         print("   |   |   ")
         print("---|---|---")
         print("   |   |   ")
-        print(" " + self.board[2][0] + " | " + self.board[2][1] + " | " + self.board[2][2] + " ") 
+        print(" " + self.board[0][2] + " | " + self.board[1][2] + " | " + self.board[2][2] + " ") 
         print("   |   |   ")
 
 class TwitterView(View):
@@ -30,9 +30,9 @@ class TwitterView(View):
         pass
 
 class MiniView(View):
-    print(self.board[0][0] + self.board[0][1] + self.board[0][2])
-    print(self.board[1][0] + self.board[1][1] + self.board[1][2])
-    print(self.board[2][0] + self.board[2][1] + self.board[2][2])
-
-
-print("\U0001f600") 
+    def display(self):
+        print("┌---┐")
+        print("|" + self.board[0][0] + self.board[1][0] + self.board[2][0] + "|") 
+        print("|" + self.board[0][1] + self.board[1][1] + self.board[2][1] + "|")
+        print("|" + self.board[0][2] + self.board[1][2] + self.board[2][2] + "|")
+        print("└---┘")
